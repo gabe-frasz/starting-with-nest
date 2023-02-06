@@ -1,7 +1,7 @@
 import { Notification } from "@/app/entities";
-import { NotificationRespository } from "@/app/repositories";
+import { NotificationRepository } from "@/app/repositories";
 
-export class InMemoryNotificationRepository implements NotificationRespository {
+export class InMemoryNotificationRepository implements NotificationRepository {
   public notifications: Notification[] = [];
 
   async findById(notificationId: string): Promise<Notification | null> {
